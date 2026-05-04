@@ -77,6 +77,15 @@ export default function Dashboard() {
               <p className="font-h3 text-h3">80 Paquetes</p>
               <p className="font-h3 text-h4 uppercase text-primary">super</p>
               </div>
+              <div className="my-4 py-2">
+              <p className="font-h3 text-h3">120 Paquetes</p>
+              <p className="font-h3 text-h4 uppercase text-primary">Hamburguesa Normal</p>
+              </div>
+              
+              <div className="my-4 py-2">
+              <p className="font-h3 text-h3">100 Paquetes</p>
+              <p className="font-h3 text-h4 uppercase text-primary">Hamburguesa Premium</p>
+              </div>
           </div>
           </div>
         </section>
