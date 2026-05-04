@@ -15,7 +15,7 @@ export default function Produccion() {
                 Resumen de Planta
               </p>
               <h2 className="font-h1 text-on-primary-container">
-                Total producción: 1,300 panes
+                Total producción: 400 Paquetes
               </h2>
               <div className="flex items-center gap-2 mt-sm">
                 <span className="material-symbols-outlined text-sm">inventory_2</span>
@@ -37,8 +37,8 @@ export default function Produccion() {
           <div className="bg-surface-container-lowest p-md rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.05)] border border-outline-variant/30">
             <div className="flex justify-between items-start mb-sm">
               <div>
-                <h4 className="font-h3 text-on-surface">Pan Hot Dog</h4>
-                <p className="text-on-surface-variant font-body-md mt-xs">Cantidad: 500 unidades</p>
+                <h4 className="font-h3 text-on-surface">Pan PERRO</h4>
+                <p className="text-on-surface-variant font-body-md mt-xs">Cantidad: 230 paquetes</p>
               </div>
               <span className="px-sm py-1 bg-amber-100 text-amber-700 rounded-full text-xs font-bold flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-amber-500" />
@@ -59,7 +59,7 @@ export default function Produccion() {
             <div className="flex justify-between items-start mb-lg">
               <div>
                 <h4 className="font-h3 text-on-surface">Pan Hamburguesa</h4>
-                <p className="text-on-surface-variant font-body-md mt-xs">Cantidad: 800 unidades</p>
+                <p className="text-on-surface-variant font-body-md mt-xs">Cantidad: 150 Paquetes</p>
               </div>
               <span className="px-sm py-1 bg-secondary-container text-secondary rounded-full text-xs font-bold flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-secondary" />
