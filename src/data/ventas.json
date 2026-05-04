@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "cliente": "Tienda Don José",
+    "hora": "10:15 AM",
+    "estado": "pendiente",
+    "productos": [
+      { "nombre": "Pan Hot Dog", "cantidad": 5 },
+      { "nombre": "Pan Hamburguesa", "cantidad": 3 }
+    ],
+    "total": 85000
+  },
+  {
+    "id": 2,
+    "cliente": "Restaurante El Sol",
+    "hora": "09:30 AM",
+    "estado": "entregado",
+    "horaEntrega": "10:32 AM",
+    "productos": [
+      { "nombre": "Pan Hamburguesa", "cantidad": 10 }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 3,
+    "cliente": "Cafetería Central",
+    "hora": "11:00 AM",
+    "estado": "pendiente",
+    "productos": [
+      { "nombre": "Pan Hot Dog", "cantidad": 8 }
+    ],
+    "total": 64000
+  }
+]
