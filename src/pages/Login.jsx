@@ -13,7 +13,7 @@ export default function LoginPage() {
     e.preventDefault();
     setLogin(true)
     localStorage.setItem("login", JSON.stringify(true));
-    navigate("/")
+    navigate("/inicio")
   };
 
   return (
