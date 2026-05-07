@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline": "#717786",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed": "#72fe88",
+                    "outline-variant": "#c1c6d7",
+                    "inverse-surface": "#2d3039",
+                    "error-container": "#ffdad6",
+                    "tertiary": "#006b27",
+                    "on-primary-fixed": "#001a41",
+                    "secondary-fixed": "#e2e2e7",
+                    "surface-variant": "#e0e2ed",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed-variant": "#004493",
+                    "tertiary-container": "#008733",
+                    "primary-container": "#0070eb",
+                    "secondary": "#5d5e63",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-fixed-variant": "#00531c",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f1f3fe",
+                    "surface-dim": "#d8d9e5",
+                    "on-surface-variant": "#414755",
+                    "on-secondary-container": "#616267",
+                    "on-surface": "#181c23",
+                    "background": "#f9f9ff",
+                    "surface-container": "#ecedf9",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#1a1c1f",
+                    "on-tertiary-container": "#f7fff2",
+                    "surface-container-high": "#e6e8f3",
+                    "secondary-fixed-dim": "#c6c6cb",
+                    "on-background": "#181c23",
+                    "secondary-container": "#dfdfe4",
+                    "inverse-primary": "#adc6ff",
+                    "surface-tint": "#005bc1",
+                    "surface-container-highest": "#e0e2ed",
+                    "on-error-container": "#93000a",
+                    "primary-fixed-dim": "#adc6ff",
+                    "on-tertiary-fixed": "#002107",
+                    "surface-bright": "#f9f9ff",
+                    "primary": "#0058bc",
+                    "on-secondary-fixed-variant": "#45474b",
+                    "inverse-on-surface": "#eef0fc",
+                    "tertiary-fixed-dim": "#53e16f",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#fefcff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "sm": "12px",
+                    "md": "16px",
+                    "xs": "4px",
+                    "xl": "32px",
+                    "margin-mobile": "16px",
+                    "base": "8px",
+                    "lg": "24px",
+                    "gutter-mobile": "12px"
+            },
+            "fontFamily": {
+                    "h3": ["Inter"],
+                    "h2": ["Inter"],
+                    "button": ["Inter"],
+                    "h1": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "h3": ["20px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "button": ["16px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "h1": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="bg-surface/90 dark:bg-surface-container-highest/90 docked full-width top-0 sticky z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-xl py-md max-w-7xl mx-auto">
+<div class="flex items-center gap-xs">
+<span class="material-symbols-outlined text-primary font-h1 text-h1" data-icon="bakery_dining">bakery_dining</span>
+<span class="font-h1 text-h1 tracking-tight text-primary dark:text-primary-fixed">RAPIPAN</span>
+</div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary py-xs" href="#hero">Home</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary py-xs transition-colors duration-200" href="#productos">Productos</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary py-xs transition-colors duration-200" href="#beneficios">Beneficios</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary py-xs transition-colors duration-200" href="#distribucion">Distribución</a>
+</div>
+<button class="bg-primary text-on-primary font-button text-button px-lg py-sm rounded-xl active:scale-95 transition-transform hover:bg-primary-container">
+                Contact Us
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[707px] flex items-center justify-center overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0 hero-gradient" data-alt="A macro photography shot of golden, freshly baked artisan hot dog and hamburger buns with sesame seeds. The warm, soft morning light hits the bread, highlighting its fluffy texture and golden crust. The scene is set in a modern industrial bakery with clean stainless steel surfaces in the background, evoking a sense of high-quality food production and morning freshness."></div>
+<div class="relative z-10 text-center px-margin-mobile max-w-4xl">
+<h1 class="font-h1 text-h1 md:text-[56px] md:leading-[64px] text-white mb-md drop-shadow-lg">Pan fresco todos los días</h1>
+<p class="font-body-lg text-body-lg text-white/90 mb-xl drop-shadow-md">Distribución para tiendas, restaurantes y negocios de comida rápida con la precisión industrial que tu negocio merece.</p>
+<div class="flex flex-col sm:flex-row gap-md justify-center">
+<a class="bg-primary text-on-primary px-xl py-md rounded-xl font-button text-button shadow-lg hover:bg-primary-container transition-all active:scale-95 text-center" href="#productos">Ver productos</a>
+<a class="bg-white/20 backdrop-blur-md border border-white/30 text-white px-xl py-md rounded-xl font-button text-button hover:bg-white/30 transition-all active:scale-95 text-center" href="#contacto">Contáctanos</a>
+</div>
+</div>
+</header>
+<!-- Productos Section -->
+<section class="py-xl px-margin-mobile max-w-7xl mx-auto" id="productos">
+<div class="mb-xl text-center">
+<span class="text-primary font-label-caps uppercase tracking-widest">Nuestra Selección</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-xs">Productos Estrella</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-64 overflow-hidden">
+<img alt="Pan Hot Dog" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A professional studio food photograph of a stack of long, soft hot dog buns on a clean white surface. The lighting is bright and airy, creating a minimalist high-key aesthetic that highlights the bread's golden-yellow crust and soft white interior. The composition is clean and modern, emphasizing the product's uniformity and industrial precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNPuStET3RPJk93hcwnk-NDQm8EO6q-Qyz7y-5jbwEAHhFANyCstYJQy6fxrA6ENL5u1pScice1hN66ASNRcSj_YgPvWnFhrAPpY80p22cVn3frQ1gglc-KtivHXfzY7FXc803goTUGgq8koRV6zrIUHz6-U7F0oy4Ay7lJpnxNtC_GUE9aCwQxGOyAQKxKF2ITmiGUSoUGCvPfOkI9cwtWX97kC5xA6fUhGL8TSlVUraLvj7Etw1RY_PX92VSZu2jW6-h9Kl_ew"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Pan Hot Dog</h3>
+<span class="bg-primary-fixed text-on-primary-fixed text-label-caps px-sm py-1 rounded-full">Paquete x10 unidades</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">La suavidad perfecta para tus perros calientes. Diseñado para mantener su forma y absorber los mejores sabores.</p>
+<button class="w-full bg-secondary-container text-on-secondary-container py-md rounded-xl font-button hover:bg-outline-variant transition-colors">Solicitar cotización</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+<div class="h-64 overflow-hidden">
+<img alt="Pan Hamburguesa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A high-end food commercial photograph featuring a perfectly round, brioche-style hamburger bun topped with glistening sesame seeds. The lighting uses warm tones to suggest a freshly baked quality, with soft shadows that define the bun's height and texture. The overall style is clean and corporate, showcasing the product as a premium component for professional kitchens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZrHqB_BtDwKiI0Y9IrKu0r82iBjkOrr5yoEoyqf0OMNemqUofOehkZkcfPFj-X0xPLZV9KRGc0y3f8oKTNsgBIbkwDWNiS0SigYgWOLOzq-7b1Zx52DgyGLO-JIg5WHJ7L7Rnt9XXkQC4ELOP3U7NrU6kuEuPQua48dtFR-lsmWosoJbed-dXLWmsErwb4eTTXZIuKJ96EOegRmyV7s0X_EF0-JDxoA--tgfudK-t66ev0Y4oXtQaIprk7p-ZBvIeXsezqLqJJw"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-sm">
+<h3 class="font-h3 text-h3 text-on-surface">Pan Hamburguesa</h3>
+<span class="bg-primary-fixed text-on-primary-fixed text-label-caps px-sm py-1 rounded-full">Paquete x6 unidades</span>
+</div>
+<p class="text-on-surface-variant font-body-md mb-lg">Resistencia y sabor para las mejores hamburguesas. Un pan que no se desarma y realza la calidad de tus ingredientes.</p>
+<button class="w-full bg-secondary-container text-on-secondary-container py-md rounded-xl font-button hover:bg-outline-variant transition-colors">Solicitar cotización</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Beneficios Section -->
+<section class="bg-surface-container-low py-xl" id="beneficios">
+<div class="max-w-7xl mx-auto px-margin-mobile">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Benefit 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 text-center hover:translate-y-[-4px] transition-transform">
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="factory">factory</span>
+</div>
+<h4 class="font-h3 text-h3 mb-xs">Producción diaria</h4>
+<p class="text-on-surface-variant font-body-md">Garantizamos pan recién salido del horno cada mañana.</p>
+</div>
+<!-- Benefit 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 text-center hover:translate-y-[-4px] transition-transform">
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+</div>
+<h4 class="font-h3 text-h3 mb-xs">Entregas rápidas</h4>
+<p class="text-on-surface-variant font-body-md">Logística optimizada para que nunca te quedes sin stock.</p>
+</div>
+<!-- Benefit 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 text-center hover:translate-y-[-4px] transition-transform">
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+</div>
+<h4 class="font-h3 text-h3 mb-xs">Calidad garantizada</h4>
+<p class="text-on-surface-variant font-body-md">Procesos industriales con estándares de alta precisión.</p>
+</div>
+<!-- Benefit 4 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl border border-outline-variant/30 text-center hover:translate-y-[-4px] transition-transform">
+<div class="bg-primary/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-md">
+<span class="material-symbols-outlined text-primary" data-icon="eco">eco</span>
+</div>
+<h4 class="font-h3 text-h3 mb-xs">Frescura asegurada</h4>
+<p class="text-on-surface-variant font-body-md">Sin conservantes excesivos, sabor natural y auténtico.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Distribución Section -->
+<section class="py-xl px-margin-mobile max-w-7xl mx-auto" id="distribucion">
+<div class="flex flex-col lg:flex-row items-center gap-xl">
+<div class="lg:w-1/2">
+<span class="text-primary font-label-caps uppercase tracking-widest">Cobertura Nacional</span>
+<h2 class="font-h2 text-h2 text-on-surface mt-xs mb-md">Aliados en tu crecimiento</h2>
+<p class="text-body-lg text-on-surface-variant mb-lg">En RAPIPAN entendemos el ritmo de la industria alimentaria. Suministramos a:</p>
+<ul class="space-y-md">
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="storefront">storefront</span>
+<span class="font-body-md">Tiendas de barrio y Minimarkets</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="restaurant">restaurant</span>
+<span class="font-body-md">Cadenas de Restaurantes y Franquicias</span>
+</li>
+<li class="flex items-center gap-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="fastfood">fastfood</span>
+<span class="font-body-md">Negocios de Comida Rápida y Food Trucks</span>
+</li>
+</ul>
+</div>
+<div class="lg:w-1/2 w-full">
+<div class="bg-surface-container-high aspect-video rounded-xl overflow-hidden relative shadow-lg">
+<img alt="Distribution Center" class="w-full h-full object-cover" data-alt="An expansive, clean industrial warehouse with organized shelves of fresh bakery products ready for distribution. The lighting is bright and professional, showing a modern logistics operation. A delivery van is visible through the large loading dock doors in the background, conveying efficiency and a vast distribution network." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBW_PWXRSN5MoFPZLnSeIgPodPfWVhImCJT4DHEU4x_KJjo1zLg0aQB5iH673eVWkDg6Var66Z4ngZVXgK7N45IYUcFUefPRKBgsrM8ubhpNs31mKJtFafdDgWM7MdKAiAj6oOo_oI8bD48dvYy8UaHprN2KdflyKEMBtffjfbkTnadbNoSE6afsxMu8hA8kFszOSkTMzCiewvVope8wbDL1W10nthp-wnBgKRhc8k5ypQmAI2g1SkNsdV-RsdcXHuVoi6Ot6shZg"/>
+<div class="absolute inset-0 bg-primary/10 flex items-center justify-center">
+<div class="bg-white/90 backdrop-blur-sm p-lg rounded-xl shadow-xl max-w-xs text-center">
+<span class="material-symbols-outlined text-primary text-4xl mb-sm" data-icon="location_on">location_on</span>
+<p class="font-h3 text-h3 text-on-surface">Logística Integral</p>
+<p class="font-body-md text-on-surface-variant">Llegamos a cada rincón con puntualidad.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contacto Section -->
+<section class="py-xl px-margin-mobile bg-surface-container-highest" id="contacto">
+<div class="max-w-7xl mx-auto text-center">
+<h2 class="font-h2 text-h2 mb-xl">¿Listo para hacer tu pedido?</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg mb-xl">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" data-icon="chat">chat</span>
+<p class="font-label-caps text-on-surface-variant">WhatsApp</p>
+<p class="font-body-lg text-on-surface">+57 300 123 4567</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" data-icon="phone">phone</span>
+<p class="font-label-caps text-on-surface-variant">Teléfono</p>
+<p class="font-body-lg text-on-surface">(601) 987 6543</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-3xl mb-sm" data-icon="location_city">location_city</span>
+<p class="font-label-caps text-on-surface-variant">Dirección</p>
+<p class="font-body-lg text-on-surface">Zona Industrial, Calle 10 #45-67</p>
+</div>
+</div>
+<a class="inline-flex items-center gap-sm bg-tertiary-container text-on-tertiary-container px-xl py-lg rounded-full font-button text-h3 shadow-lg hover:scale-105 transition-transform" href="https://wa.me/573001234567" target="_blank">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+                Realizar pedido
+            </a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg px-margin-mobile py-xl max-w-7xl mx-auto font-body-md text-body-md text-on-surface dark:text-inverse-on-surface">
+<div class="space-y-md">
+<span class="font-h3 text-h3 text-primary dark:text-primary-fixed-dim">RAPIPAN</span>
+<p class="text-on-surface-variant dark:text-on-secondary-fixed-variant">Industrial Precision with a Human Touch.</p>
+<p class="text-on-surface-variant dark:text-on-secondary-fixed-variant">© 2024 RAPIPAN.</p>
+</div>
+<div class="space-y-sm">
+<p class="font-button text-button mb-md">Explorar</p>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Product Catalog</a></li>
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Distribution Network</a></li>
+</ul>
+</div>
+<div class="space-y-sm">
+<p class="font-button text-button mb-md">Compañía</p>
+<ul class="flex flex-col gap-xs">
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors" href="#">Quality Standards</a></li>
+<li><a class="text-primary dark:text-tertiary-fixed underline" href="#">Order via WhatsApp</a></li>
+</ul>
+</div>
+<div class="space-y-md">
+<p class="font-button text-button mb-md">Boletín</p>
+<div class="flex gap-xs">
+<input class="bg-surface-container-low border border-outline-variant rounded-lg px-md py-xs w-full focus:ring-2 focus:ring-primary focus:border-transparent outline-none" placeholder="Email" type="email"/>
+<button class="bg-primary text-on-primary p-xs rounded-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
